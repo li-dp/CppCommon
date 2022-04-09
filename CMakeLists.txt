@@ -7,6 +7,7 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 project(cppcommon)
 
 # Doxygen
+find_package(fmt CONFIG REQUIRED)
 find_package(Doxygen)
 if(DOXYGEN_FOUND)
   set(DOXYGEN "doxygen")
@@ -69,7 +70,7 @@ file(GLOB_RECURSE LIB_SOURCE_FILES "include/*.cpp" "source/*.cpp")
 add_library(cppcommon ${LIB_HEADER_FILES} ${LIB_INLINE_FILES} ${LIB_SOURCE_FILES})
 set_target_properties(cppcommon PROPERTIES COMPILE_FLAGS "${PEDANTIC_COMPILE_FLAGS}" FOLDER "libraries")
 target_include_directories(cppcommon PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include" PUBLIC ${vld})
-target_link_libraries(cppcommon ${LINKLIBS} fmt)
+target_link_libraries(cppcommon ${LINKLIBS} fmt::fmt)
 list(APPEND INSTALL_TARGETS cppcommon)
 list(APPEND LINKLIBS cppcommon)
 

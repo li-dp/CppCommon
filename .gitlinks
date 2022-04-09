@@ -1,8 +1,8 @@
 # Modules
-Catch2 modules/Catch2 https://github.com/catchorg/Catch2.git v2.x
+#Catch2 modules/Catch2 https://github.com/catchorg/Catch2.git v2.x
 CppBenchmark modules/CppBenchmark https://github.com/chronoxor/CppBenchmark.git master
-fmt modules/fmt https://github.com/fmtlib/fmt.git master
+#fmt modules/fmt https://github.com/fmtlib/fmt.git master
 
 # Scripts
-build build https://github.com/chronoxor/CppBuildScripts.git master
+build build https://github.com/li-dp/CppBuildScripts.git master
 cmake cmake https://github.com/chronoxor/CppCMakeScripts.git master
